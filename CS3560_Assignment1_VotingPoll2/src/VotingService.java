@@ -19,7 +19,6 @@ public class VotingService {
         this.multipleChoiceCounts = new HashMap<>();
         this.answerResults = new HashMap<>();
         
-    	//this.correctAnswer = "A. Red"; //correctAnswer;
 
         if (question.isSingleChoice()) {
             this.correctAnswerSingleChoice = correctAnswer;
@@ -31,13 +30,6 @@ public class VotingService {
         for (String answer : question.getCandidateAnswers()) {
             singleChoiceCounts.put(answer, 0);
             multipleChoiceCounts.put(answer, 0);}
-        /*
-        for (String answer : question.getCandidateAnswers()) {
-            if (question.isSingleChoice()) {
-                singleChoiceCounts.put(answer, 0);
-            } else {
-                multipleChoiceCounts.put(answer, 0);}
-        }*/
     }
 
 	public Question getQuestion() {
